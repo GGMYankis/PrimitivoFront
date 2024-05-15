@@ -1,0 +1,242 @@
+<div class="wrapper">
+  <aside id="sidebar">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button">
+        <img
+          src="../../../assets/angular2-logo.png"
+          class="logo"
+          (click)="close()"
+        />
+      </button>
+      <div class="sidebar-logo">
+        <a href="#">Primitivo</a>
+      </div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a routerLink="/pages/clientes" class="sidebar-link">
+          <i class="bx bx-group"></i>
+          <span>Clientes</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="/pages/usuarios" class="sidebar-link">
+          <i class="bx bx-group"></i>
+          <span>Usuarios</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="/pages/categorias" class="sidebar-link">
+          <i class="bx bx-category"></i>
+          <span>Categorias</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="/pages/productos" class="sidebar-link">
+          <i class="bx bxl-product-hunt"></i>
+          <span>Productos</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a routerLink="/pages/ventas" class="sidebar-link">
+          <i class="bx bx-money"></i>
+          <span>Ventas</span>
+        </a>
+      </li>
+      <!--     <li class="sidebar-item">
+        <a
+          href="#"
+          class="sidebar-link collapsed has-dropdown"
+          data-bs-toggle="collapse"
+          data-bs-target="#auth"
+          aria-expanded="false"
+          aria-controls="auth"
+        >
+          <i class="lni lni-protection"></i>
+          <span>Clientes</span>
+        </a>
+        <ul
+          id="auth"
+          class="sidebar-dropdown list-unstyled collapse"
+          data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="/pages/ingreso-hospitalizacion" class="sidebar-link"
+              >Ingreso a Hospitalizacion</a
+            >
+          </li>
+        
+        </ul>
+      </li> -->
+      <!--    <li class="sidebar-item">
+        <a
+          href="#"
+          class="sidebar-link collapsed has-dropdown"
+          data-bs-toggle="collapse"
+          data-bs-target="#gestion"
+          aria-expanded="false"
+          aria-controls="gention"
+        >
+          <i class="lni lni-protection"></i>
+          <span>Gestion de Farmacia</span>
+        </a>
+        <ul
+          id="gestion"
+          class="sidebar-dropdown list-unstyled collapse"
+          data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Vademécum</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="/pages/dispensacion" class="sidebar-link">Dispensacion</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="/pages/devoluciones" class="sidebar-link">Devoluciones</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="/pages/medicamentos" class="sidebar-link">Medicamentos</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sidebar-item">
+        <a
+          href="#"
+          class="sidebar-link collapsed has-dropdown"
+          data-bs-toggle="collapse"
+          data-bs-target="#multi"
+          aria-expanded="false"
+          aria-controls="multi"
+        >
+          <i class="lni lni-layout"></i>
+          <span>Agendamiento de Visitas</span>
+        </a>
+        <ul
+          id="multi"
+          class="sidebar-dropdown list-unstyled collapse"
+          data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="/pages/ayudas-diagnosticas" class="sidebar-link"
+              >Agendamiento</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Medicos o Especialistas</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Personal de Enfermeria</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Terapistas</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Otros Procedimientos</a>
+          </li>
+         <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#multi-two"
+              aria-expanded="false"
+              aria-controls="multi-two"
+            >
+             Medicoso Especialistas
+            </a>
+            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 1</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 2</a>
+              </li>
+            </ul>
+          </li> 
+        </ul>
+      </li>
+      <li class="sidebar-item">
+        <a
+          href="#"
+          class="sidebar-link collapsed has-dropdown"
+          data-bs-toggle="collapse"
+          data-bs-target="#estadisticas"
+          aria-expanded="false"
+          aria-controls="estadisticas"
+        >
+          <i class="lni lni-layout"></i>
+          <span>Estadística</span>
+        </a>
+        <ul
+          id="estadisticas"
+          class="sidebar-dropdown list-unstyled collapse"
+          data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Por Especialidad</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Multiples escenarios</a>
+          </li>
+           <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#multi-two"
+              aria-expanded="false"
+              aria-controls="multi-two"
+            >
+              Two Links
+            </a>
+            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 1</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 2</a>
+              </li>
+            </ul>
+          </li> 
+        </ul>
+      </li>
+   <li class="sidebar-item">
+        <a href="#" class="sidebar-link">
+          <i class="lni lni-popup"></i>
+          <span>Notification</span>
+        </a>
+      </li>  -->
+      <!--     <li class="sidebar-item">
+        <a href="#" class="sidebar-link">
+          <i class="lni lni-cog"></i>
+          <span>Setting</span>
+        </a>
+      </li> -->
+    </ul>
+    <div class="sidebar-footer" (click)="logout()">
+      <a href="#" class="sidebar-link">
+        <i class="lni lni-exit"></i>
+        <!-- <span>Logout</span> -->
+      </a>
+    </div>
+  </aside>
+  <div class="main">
+    <div class="header">
+      <!--       <h1 class="title">
+        <span>
+          <img
+            src="../../../assets/hc.png"
+            style="width: 40px; height: 40px"
+          /> </span
+        >Hospitalizacion en casa
+      </h1> -->
+
+      <div class="layout_perfil">
+        <h2>administrador</h2>
+      </div>
+    </div>
+    <div class="cont-router">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

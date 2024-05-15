@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primate: #2196f3;
+  --indigo: #3f51b5;
+}
+
