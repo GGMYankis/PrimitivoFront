@@ -1,0 +1,72 @@
+
+.cont-image {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cont-image .logo {
+  width: 300px;
+  height: 150px;
+}
+
+.detalles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.detalles div{
+    display: flex;
+    gap: 20px;
+}
+.detalles h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.detalles h2 span {
+  font-size: 13px;
+  font-weight: normal;
+  margin-left: 30px;
+}
+.detalle-persona h1 {
+  font-weight: bold;
+  margin: 0;
+}
+.detalle-persona p {
+  color: #25327c;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.table thead {
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+
+.cuenta img {
+  width: 100px;
+  height: 100px;
+}
+.cuenta h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #25327c;
+  margin: 0;
+}
+
+.cuenta h2 span {
+  font-size: 10px;
+  font-weight: bold;
+  color: orange;
+  margin: 0;
+}
+
+.cont-pdf {
+  min-height: 95%;
+  min-width: 95%;
+  padding: 0  30px 30px 30px;
+}

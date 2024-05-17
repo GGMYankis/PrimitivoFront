@@ -1,1 +1,49 @@
-<p>modal-client works!</p>
+<h1 mat-dialog-title>{{ tituloModal }}</h1>
+
+<mat-dialog-content>
+  <form class="modal-empleado" [formGroup]="formulario">
+    <mat-grid-list cols="1" rowHeight="80px">
+      
+      <mat-grid-tile class="col">
+        <mat-form-field appearance="outline">
+          <mat-label>Cedula</mat-label>
+          <input  formControlName="cedula" matInput autocomplete="off" />
+          <mat-icon matSuffix>account-box</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input formControlName="nombre" matInput autocomplete="off" />
+          <mat-icon matSuffix>account-box</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input formControlName="correo" matInput autocomplete="off" />
+          <mat-icon matSuffix>account-box</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile >
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Telefono</mat-label>
+          <input  formControlName="telefono" matInput autocomplete="off" />
+          <mat-icon matSuffix>account-box</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+     
+
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" (click)="Register_or_Edit()">
+    {{ nombreBoton }}
+  </button>
+</mat-dialog-actions>

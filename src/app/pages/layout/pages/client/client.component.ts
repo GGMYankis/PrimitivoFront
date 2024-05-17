@@ -44,7 +44,6 @@ export class ClientComponent {
     this.clientServices.List().subscribe({
       next: (data) => {
         if (data.status) {
-          console.log(data);
           this.ListClient.data = data.value;
         } else {
           Swal.fire({

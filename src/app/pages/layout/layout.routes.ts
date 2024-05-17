@@ -5,6 +5,7 @@ import { CategoryComponent } from './pages/category/category.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ClientComponent } from './pages/client/client.component';
 import { SalesComponent } from './pages/sales/sales.component';
+import { HistoryComponent } from './pages/history/history.component';
 
 export const routes: Routes = [
   {
@@ -35,6 +36,11 @@ export const routes: Routes = [
       {
         path: 'ventas',
         component: SalesComponent,
+        pathMatch: 'full',
+      },
+      {
+        path: 'historial',
+        component: HistoryComponent,
         pathMatch: 'full',
       },
     ],

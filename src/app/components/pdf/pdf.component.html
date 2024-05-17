@@ -1,0 +1,59 @@
+<p-dialog
+  [modal]="true"
+  [(visible)]="visible"
+  [style]="{ width: '90vw' }"
+  [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+>
+  <div class="cont-pdf" id="page">
+    <div class="cont-image">
+      <div class="cuenta">
+        <img
+          src="https://s3.amazonaws.com/cdn.conectate-new.com/wp-content/uploads/2020/04/24032409/13698097_1140797959325992_6196742738389706639_o.jpg"
+        />
+        <h2>Grupo Primitivo</h2>
+        <h2>Cuenta de ahorro : <span>9603854097</span></h2>
+      </div>
+      <div class="detalle-persona">
+        <h1>DESTINATARIO:</h1>
+        <p>{{ cliente }}</p>
+      </div>
+      <img src="../../../assets/logo-primi.jpg" class="logo" />
+    </div>
+    <div class="detalles">
+      <div>
+        <h2>
+          FACTURA: <span>{{ numeroFactura }}</span>
+        </h2>
+        <h2>FECHA: <span>009022</span></h2>
+      </div>
+
+      <div>
+        <h2>
+          TOTAL: <span>{{ total }}</span>
+        </h2>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of venta?.detalleVenta">
+          <th scope="row">{{ p.productoNombre }}</th>
+          <td>{{ p?.cantidad }}</td>
+          <td>{{ p?.precio }}</td>
+          <td>{{ p?.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <button (click)="createPdf()">Crear PDF</button>
+    <input type="file" (change)="onFileSelected($event)">
+  </div>
+</p-dialog>

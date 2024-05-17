@@ -1,8 +1,4 @@
-:root {
-  --color-primate: #2196f3;
-  --indigo: #3f51b5;
-}
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 
 ::after,
 ::before {
@@ -22,6 +18,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0 20px;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
 }
 .header .title {
   margin: 0;
@@ -89,13 +86,13 @@ body {
   min-width: 70px;
   z-index: 1000;
   transition: all 0.25s ease-in-out;
-  background-image: linear-gradient(to bottom, #2196f3, #3f51b5);
+  background-color: #25327c;
   display: flex;
   flex-direction: column;
 }
 
 #sidebar.expand {
-  width: 200px;
+  width: 300px;
   min-width: 200px;
 }
 
