@@ -1,0 +1,43 @@
+
+mat-card{
+    overflow:hidden ;
+}
+.const-detail{
+    display: flex;
+    gap: 20px;
+}
+.header-venta{
+    display: flex;
+    align-items:center ;
+    background-color:#25327c ;
+    padding: 16px;
+}
+
+.header-venta h2{
+    margin: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.cont-client{
+    width: 50%;
+}
+
+.header-client{
+    background-color:#25327c ;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.header-client h2{
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+
+.form-client{
+    border: 2px solid #25327c;
+    border-radius: 4px;
+    padding: 5px;
+}

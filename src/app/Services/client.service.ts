@@ -17,5 +17,9 @@ export class ClientService {
   List(): Observable<ResponseApi> {
     return this.http.get<ResponseApi>(`${this.urlApi}/List`);
   }
+
+  Register(request:any): Observable<ResponseApi> {
+    return this.http.post<ResponseApi>(`${this.urlApi}/Register` , request);
+  }
 }
 

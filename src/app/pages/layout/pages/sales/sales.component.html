@@ -1,7 +1,132 @@
 <h1 style="margin: 20px 0px 0px 40px">Registrar Venta</h1>
 <!-- //aqui -->
 <mat-card style="margin: 20px 40px 40px 40px">
-  <mat-card-content class="dashboard-card-content">
+
+  <div class="header-venta">
+       <h2>Detalle Venta</h2> 
+  </div>
+  <mat-card-content>
+    <div class="const-detail">
+      <div class="cont-client">
+        <div class="header-client">
+          <h2>Detalle Cliente</h2>
+        </div>
+        <form class="form-client">
+          <div class="row">
+            <div class="col"> 
+              <label class="form-label">
+                Numero Documento
+              </label>
+              <input>
+            </div>
+            <div class="col"> 
+              <label class="form-label">
+                Nombre
+              </label>
+              <input>
+            </div>
+    
+            <div class="col"> 
+              <label class="form-label">
+                Direccion
+              </label>
+              <input>
+            </div>
+    
+            <div class="col"> 
+              <label class="form-label">
+                Telefono
+              </label>
+              <input>
+            </div>
+          </div>
+        </form>  
+      </div>
+  
+      <div class="cont-client">
+        <div class="header-client">
+          <h2>Detalle Producto</h2>
+        </div>
+        <form class="form-client">
+          <div class="row">
+            <div class="col"> 
+              <label class="form-label">
+                Producto
+              </label>
+              <input>
+            </div>
+            <div class="col"> 
+              <label class="form-label">
+                Nombre
+              </label>
+              <input>
+            </div>
+    
+            <div class="col"> 
+              <label class="form-label">
+                Precio
+              </label>
+              <input>
+            </div>
+    
+            <div class="col"> 
+              <label class="form-label">
+                Stock
+              </label>
+              <input>
+            </div>
+
+            <div class="col"> 
+              <label class="form-label">
+                Cantidad
+              </label>
+              <input>
+            </div>
+          </div>
+        </form>
+      
+      </div>
+    </div>
+    
+    <hr>
+
+    <table mat-table [dataSource]="ListaProductosParaVenta" style="width: 100%">
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let element">{{ element.productoNombre }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef>Cantidad</th>
+        <td mat-cell *matCellDef="let element">{{ element.cantidad }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef>Precio</th>
+        <td mat-cell *matCellDef="let element">{{ element.precio }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>Total</th>
+        <td mat-cell *matCellDef="let element">{{ element.total }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef style="width: 200px"></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="warn" (click)="deleteProduct(element)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnasTabla"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnasTabla"></tr>
+    </table>
+
+  </mat-card-content>
+
+<!--   <mat-card-content class="dashboard-card-content">
     <form [formGroup]="formulario">
       <mat-grid-list cols="4" rowHeight="70px">
         <mat-grid-tile [colspan]="2">
@@ -58,7 +183,7 @@
     <table mat-table [dataSource]="ListaProductosParaVenta" style="width: 100%">
       <ng-container matColumnDef="nombre">
         <th mat-header-cell *matHeaderCellDef>Nombre</th>
-        <td mat-cell *matCellDef="let element">{{ element.nombre }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.productoNombre }}</td>
       </ng-container>
 
       <ng-container matColumnDef="cantidad">
@@ -99,5 +224,5 @@
     </button>
 
     <div class="mat-elevation-z"></div>
-  </mat-card-content>
+  </mat-card-content> -->
 </mat-card>

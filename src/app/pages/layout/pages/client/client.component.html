@@ -7,7 +7,7 @@
         [disabled]="rol == 'Usuario Regular' ? true : false"
         mat-raised-button
         class="btn-add"
-        style="background-color: #2196f3; color: #fff"
+        style=" background-color:#25327c ; color: #fff"
         (click)="Register()"
       >
         <mat-icon mat-list-icon>add</mat-icon>Nuevo Cliente
@@ -44,7 +44,7 @@
         </ng-container>
 
         <ng-container matColumnDef="activo">
-          <th mat-header-cell *matHeaderCellDef>Activo</th>
+          <th mat-header-cell *matHeaderCellDef >Activo</th>
           <td mat-cell *matCellDef="let element">{{ element.activo }}</td>
         </ng-container>
 
@@ -61,7 +61,8 @@
             <button
               [disabled]="rol == 'Usuario Regular' ? true : false"
               mat-icon-button
-              color="warn"
+              color="warn" 
+              (click)="Delete()"
             >
               <mat-icon>delete</mat-icon>
             </button>

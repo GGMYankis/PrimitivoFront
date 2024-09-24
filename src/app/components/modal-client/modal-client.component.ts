@@ -3,6 +3,7 @@ import { MaterialModule } from '../../material/material/material.module';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ClientService } from '../../Services/client.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-client',
@@ -27,7 +28,7 @@ export class ModalClientComponent {
       nombre: ['', Validators.required],
       correo: ['', Validators.required],
       telefono: ['', Validators.required],
-      direccion: ['1', Validators.required],
+      direccion: ['', Validators.required],
     });
 
     if (cliente != null) {
@@ -43,16 +44,37 @@ export class ModalClientComponent {
     }
 
   }
-
+  
   Register_or_Edit() {
     const obj = {
       idCliente: 0,
-      cedula: 'string',
-      nombre: 'string',
-      correo: 'string',
-      telefono: 'string',
+      cedula: this.formulario.value.cedula,
+      nombre: this.formulario.value.nombre,
+      correo: this.formulario.value.correo,
+      telefono: this.formulario.value.telefono,
       activo: true,
-      direccion: 'string',
+      direccion: this.formulario.value.direccion,
     };
+
+    this._clientServices.Register(obj).subscribe({
+      next:(data) => {
+        if(data.status){
+          Swal.fire({
+            title: "Good job!",
+            text: "Cliente Registrado!",
+            icon: "success"
+          });
+          this.modalActual.close('true');
+        }else{
+          Swal.fire({
+            title: "No se pudo registrar el cliente!",
+            text: `${data.msgError}`,
+            icon: "warning"
+          });
+        }
+      
+      }
+    })
+ 
   }
 }

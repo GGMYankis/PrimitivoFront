@@ -57,8 +57,33 @@ export class ClientComponent {
   }
 
   Register() {
-    this.dialog.open(ModalClientComponent);
+    this.dialog.open(ModalClientComponent) .afterClosed()
+    .subscribe((resultado) => {
+      if (resultado === 'true') this.List();
+    });;
   }
+
+ 
+  Delete() {
+
+    Swal.fire({
+      title: 'Deseas eliminar al cliente',
+      text: '',
+      icon: 'warning',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'Si eliminar',
+      showCancelButton: true,
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'No, volver',
+    }).then(result => {
+      if(result.isConfirmed){
+       
+      }
+    })
+
+  }
+
+  
   ngOnInit(): void {
     this.List();
   }

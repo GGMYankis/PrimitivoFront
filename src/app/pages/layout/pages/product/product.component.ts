@@ -41,7 +41,6 @@ export class ProductComponent implements OnInit {
     this.productServices.List().subscribe({
       next: (data) => {
         if (data.status) {
-          console.log(data)
           this.ListProduct.data = data.value;
         } else {
           Swal.fire({

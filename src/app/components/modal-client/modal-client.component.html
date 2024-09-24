@@ -1,12 +1,12 @@
 <h1 mat-dialog-title>{{ tituloModal }}</h1>
 
 <mat-dialog-content>
-  <form class="modal-empleado" [formGroup]="formulario">
+  <form class="modal-empleado" [formGroup]="formulario" style="width: 400px;">
     <mat-grid-list cols="1" rowHeight="80px">
       
       <mat-grid-tile class="col">
-        <mat-form-field appearance="outline">
-          <mat-label>Cedula</mat-label>
+        <mat-form-field appearance="outline" >
+          <mat-label>RNC</mat-label>
           <input  formControlName="cedula" matInput autocomplete="off" />
           <mat-icon matSuffix>account-box</mat-icon>
         </mat-form-field>
@@ -37,13 +37,14 @@
       </mat-grid-tile>
 
      
+     
 
     </mat-grid-list>
   </form>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
-  <button mat-raised-button color="warn" (click)="Register_or_Edit()">
+  <button mat-raised-button color="warn" (click)="Register_or_Edit()" style="background-color:#25327c ;">
     {{ nombreBoton }}
   </button>
 </mat-dialog-actions>

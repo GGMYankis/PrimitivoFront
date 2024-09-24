@@ -86,8 +86,8 @@ export class SalesComponent implements OnInit {
 
     const newProduct = {
       idProducto: productFound.idProducto,
-      nombre: productFound.nombre,
-      cantidad: this.formulario.value.cantidad,
+      productoNombre: productFound.nombre,
+      cantidad: parseInt( this.formulario.value.cantidad),
       precio: productFound.precio,
       total: productFound.precio * this.formulario.value.cantidad,
     };
@@ -117,17 +117,29 @@ export class SalesComponent implements OnInit {
   }
 
   RegisterVenta() {
-    const obj = {
-      idUsuario: 4,
-      idCliente: this.formulario.value.cliente,
-      tipoPago: this.tipodePagoDefecto,
-      total: this.total,
-      detalleVenta: this.ListaProductosParaVenta,
-    };
 
-    this.ventaServices.Register(obj).subscribe({
+    const  obj  = {
+    "numeroFactura": "",
+    "nombreAsistente": "",
+    "nombreCliente": "",
+    "correoCliente": "",
+    "idUsuario": 2,
+    "idCliente": this.formulario.value.cliente,
+    "tipoPago": this.tipodePagoDefecto,
+    "total": this.total,
+    "enviada": true,
+     detalleVenta: this.ListaProductosParaVenta,
+    }
+  
+    console.log(obj)
+
+
+    
+   /*  this.ventaServices.Register(obj).subscribe({
       next: (data) => {
+        console.log(data)
         if (data.status) {
+          
           Swal.fire({
             title: 'Venta Registrada!',
             text: `Número de venta: ${data.value.numeroFactura}`,
@@ -150,7 +162,7 @@ export class SalesComponent implements OnInit {
         }
       },
     });
-
+ */
     this.formulario.patchValue({
       cantidad: '',
       producto: '',
